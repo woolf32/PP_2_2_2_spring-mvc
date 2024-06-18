@@ -16,10 +16,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="car: ${car}">
-        <td th:text="${car.id}"/>
-        <td th:text="${car.model}"/>
-        <td th:text="${car.series}"/>
+    <tr th:each="cars: ${cars}">
+        <td th:text="${cars.id}"/>
+        <td th:text="${cars.model}"/>
+        <td th:text="${cars.series}"/>
     </tr>
     </tbody>
 </table>
