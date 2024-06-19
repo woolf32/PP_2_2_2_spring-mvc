@@ -1,5 +1,6 @@
 package web.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -16,11 +17,13 @@ import java.util.List;
 @Controller
 public class CarController {
 
+    @Autowired
     private CarServiceImpl carServiceImpl;
 
     public CarController(CarServiceImpl carServiceImpl) {
         this.carServiceImpl = carServiceImpl;
     }
+
     @GetMapping("/cars")
     public String index(@RequestParam(defaultValue="5") Integer count, ModelMap model) {
         model.addAttribute("cars", carServiceImpl.cars(count));
