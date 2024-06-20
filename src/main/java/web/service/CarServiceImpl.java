@@ -20,7 +20,7 @@ public class CarServiceImpl implements CarService {
             cars.add(new Car(4, "Rover", 1));
             cars.add(new Car(5, "BMW", 4));
         }
-        return cars.stream().limit(count).collect(Collectors.toList());
+        return cars.stream().limit(count).toList();
     }
 }
 
